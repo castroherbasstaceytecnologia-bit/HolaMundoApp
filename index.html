@@ -1,52 +1,133 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#070b1c">
+  <meta name="description" content="HolaMundoApp: una experiencia interactiva del futuro.">
+  <title>HolaMundoApp | Beyond the Ordinary</title>
 
-    <title>Hola Mundo</title>
-
-    <link rel="stylesheet" href="style.css">
-    <link rel="manifest" href="manifest.json">
+  <link rel="manifest" href="./manifest.json">
+  <link rel="icon" href="./icons/icon-192.png">
+  <link rel="stylesheet" href="./style.css">
 </head>
-
 <body>
+  <div class="universe" aria-hidden="true">
+    <div class="orb orb-one"></div>
+    <div class="orb orb-two"></div>
+    <div class="grid-floor"></div>
+    <div id="particles"></div>
+  </div>
 
-    <main class="app">
+  <main class="app">
+    <header class="topbar">
+      <a class="brand" href="./" aria-label="HolaMundoApp, inicio">
+        <span class="brand-icon">H<span>✦</span></span>
+        <span>HolaMundo<span class="brand-light">App</span></span>
+      </a>
+      <span class="status">
+        <span class="status-dot"></span>
+        SISTEMA ACTIVO
+      </span>
+    </header>
 
-        <div class="emoji" id="emoji">👋</div>
+    <section id="homeScreen" class="screen home-screen">
+      <div class="eyebrow">
+        <span class="eyebrow-line"></span>
+        UNA NUEVA EXPERIENCIA DIGITAL
+        <span class="eyebrow-line"></span>
+      </div>
 
-        <h1>Hola mundo</h1>
-
-        <p>
-            ¡Bienvenido a mi primera aplicación!
+      <div class="hero">
+        <p class="hero-kicker">EL UNIVERSO COMIENZA AQUÍ</p>
+        <h1>Más allá de<br>lo <span class="gradient-text">ordinario.</span></h1>
+        <p class="hero-description">
+          Dos palabras. Dos universos.<br>
+          Una experiencia que recordarás.
         </p>
+      </div>
 
-        <button onclick="saludar()">
-            Saludar 👋
+      <div class="portal">
+        <div class="portal-ring ring-one"></div>
+        <div class="portal-ring ring-two"></div>
+        <div class="portal-core">
+          <span>H</span>
+          <span class="core-star">✦</span>
+        </div>
+      </div>
+
+      <div class="actions">
+        <button id="helloBtn" class="action-card hello-card" type="button">
+          <span class="card-number">01 / INICIAR</span>
+          <span class="card-symbol">✧</span>
+          <span class="card-title">Hola, mundo</span>
+          <span class="card-description">Descubre el comienzo</span>
+          <span class="card-bottom">
+            EXPLORAR <span>↗</span>
+          </span>
         </button>
 
-        <p id="mensaje"></p>
+        <button id="byeBtn" class="action-card bye-card" type="button">
+          <span class="card-number">02 / FINALIZAR</span>
+          <span class="card-symbol">☾</span>
+          <span class="card-title">Chao, mundo</span>
+          <span class="card-description">Hasta el próximo viaje</span>
+          <span class="card-bottom">
+            DESPEDIRSE <span>↗</span>
+          </span>
+        </button>
+      </div>
 
-        <footer>
-            Proyecto de Tecnología · 2026
-        </footer>
+      <p class="hint">
+        <span>✦</span> ELIGE UNA EXPERIENCIA PARA CONTINUAR
+      </p>
+    </section>
 
-    </main>
+    <section id="experienceScreen" class="screen experience-screen hidden"
+      aria-live="polite">
+      <button id="backBtn" class="back-btn" type="button">
+        <span>←</span> VOLVER AL INICIO
+      </button>
 
-    <script src="script.js"></script>
-    <script>
-    if ("serviceWorker" in navigator) {
+      <div id="experienceArt" class="experience-art">
+        <div class="experience-ring exp-ring-one"></div>
+        <div class="experience-ring exp-ring-two"></div>
+        <div class="experience-symbol" id="experienceSymbol">✦</div>
+      </div>
 
-        window.addEventListener("load", () => {
+      <p id="experienceEyebrow" class="experience-eyebrow">
+        UNA NUEVA AVENTURA
+      </p>
 
-            navigator.serviceWorker.register(
-                "./service-worker.js"
-            );
+      <h2 id="experienceTitle" class="experience-title">
+        ¡HOLA,<br>MUNDO!
+      </h2>
 
-        });
+      <p id="experienceMessage" class="experience-message">
+        Todo gran viaje comienza con un primer paso.
+      </p>
 
-    }
-</script>
+      <div class="sound-indicator">
+        <span class="sound-icon" id="soundIcon">♫</span>
+        <span id="soundLabel">MODO MUSICAL ACTIVADO</span>
+        <span class="sound-bars" aria-hidden="true">
+          <i></i><i></i><i></i><i></i><i></i>
+        </span>
+      </div>
+
+      <button id="replayBtn" class="replay-btn" type="button">
+        ↻ VOLVER A ESCUCHAR
+      </button>
+
+      <p class="signature">CREADO CON CURIOSIDAD · IMPULSADO POR IMAGINACIÓN</p>
+    </section>
+
+    <footer class="footer">
+      <span>© 2026 HOLAMUNDOAPP</span>
+      <span>DISEÑADO PARA EXPLORAR EL FUTURO <span class="footer-star">✦</span></span>
+    </footer>
+  </main>
+
+  <script src="./script.js"></script>
 </body>
 </html>

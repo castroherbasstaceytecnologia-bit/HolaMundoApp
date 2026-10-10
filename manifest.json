@@ -1,22 +1,27 @@
 {
-    "name": "Hola Mundo - Mi Aplicación",
-    "short_name": "Hola Mundo",
-    "description": "Mi primera aplicación móvil desarrollada como proyecto de Tecnología.",
-    "start_url": "./",
-    "display": "standalone",
-    "background_color": "#f5e8ff",
-    "theme_color": "#7c5cff",
-    "orientation": "portrait",
-    "icons": [
-        {
-            "src": "icons/icon-192.png",
-            "sizes": "192x192",
-            "type": "image/png"
-        },
-        {
-            "src": "icons/icon-512.png",
-            "sizes": "512x512",
-            "type": "image/png"
-        }
-    ]
+  "id": "./",
+  "name": "HolaMundoApp - Beyond the Ordinary",
+  "short_name": "HolaMundoApp",
+  "description": "Una experiencia futurista de bienvenida y despedida.",
+  "lang": "es",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#070b1c",
+  "theme_color": "#070b1c",
+  "icons": [
+    {
+      "src": "./icons/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "./icons/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    }
+  ]
 }
